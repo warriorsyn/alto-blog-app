@@ -1,8 +1,10 @@
 import React, { useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../atoms/Logo/Logo";
-import { Autocomplete, Option } from "../../atoms/Autocomplete/Autocomplete";
 import { Container, Grid } from "@mui/material";
+
+import { Logo } from "../../atoms/Logo/Logo";
+import { Autocomplete, Option } from "../../atoms/Autocomplete/Autocomplete";
+
 import "./menu.scss";
 
 type Props = {

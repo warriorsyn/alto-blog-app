@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {PostForm} from "../organisms/PostForm/PostForm";
-import {Post} from "../types";
+import {Post} from "../services/types";
 import {useParams} from "react-router-dom";
 import {getPostByIdFromLocalStorage} from "../services/api";
 

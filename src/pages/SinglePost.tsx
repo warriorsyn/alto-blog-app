@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {PostView} from "../organisms/PostView/PostView";
 import {getPostByIdFromLocalStorage} from "../services/api";
-import {Post} from "../types";
+import {Post} from "../services/types";
 
 export const SinglePost: React.FC = () => {
     const [singlePost, setSinglePost] = useState<Post>();

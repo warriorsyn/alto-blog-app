@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import {CardGrid} from "../../molecules/CardGrid/CardGrid";
-import { Post } from "../../types";
+import { Post } from "../../services/types";
 
 import './postlist.scss';
 

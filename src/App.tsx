@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container/Container";
 
-import { Post } from "./types";
+import { Post } from "./services/types";
 import { Home } from "./pages/Home";
 import { Blog } from "./pages/Blog";
 import { NewPost } from "./pages/NewPost";

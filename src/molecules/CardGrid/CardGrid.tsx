@@ -3,7 +3,7 @@ import {Grid, Box} from "@mui/material";
 import {Link} from "react-router-dom";
 
 import { Card } from "../Card/Card";
-import { Post } from "../../types";
+import { Post } from "../../services/types";
 
 import "./CardGrid.scss";
 

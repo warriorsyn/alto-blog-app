@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 
 import {Button} from "../../atoms/Button/Button";
-import { Post } from "../../types";
+import { Post } from "../../services/types";
 
 
 import './postform.scss'

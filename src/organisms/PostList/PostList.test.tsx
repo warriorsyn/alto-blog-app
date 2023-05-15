@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
 import { PostList } from "./PostList";
-import { Post } from "../../types";
+import { Post } from "../../services/types";
 
 describe("PostList", () => {
     const posts: Post[] = [

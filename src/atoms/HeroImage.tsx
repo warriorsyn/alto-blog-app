@@ -5,9 +5,8 @@ type Props = {
     height?: string,
     width?: string
 }
-//"https://placeimg.com/640/480/tech"
 
-const HeroImage: React.FC<Props> = ({  src, width, height }) => {
+export const HeroImage: React.FC<Props> = ({  src, width, height }) => {
     return (
         <div>
             <img
@@ -18,5 +17,3 @@ const HeroImage: React.FC<Props> = ({  src, width, height }) => {
         </div>
     );
 };
-
-export default HeroImage;

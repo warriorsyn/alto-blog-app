@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
 
-import { Post } from "../../types";
-import HeroImage from "../../atoms/HeroImage";
+import {Post} from "../../services/types";
+import {HeroImage} from "../../atoms/HeroImage";
+
 
 import './postview.scss';
 

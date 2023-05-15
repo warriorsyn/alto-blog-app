@@ -1,12 +1,13 @@
 import React from "react";
 import './Logo.scss'
+import {Link} from "react-router-dom";
 
-const Logo: React.FC = () => {
+export const Logo: React.FC = () => {
     return (
-        <div>
-            <h1>Logo</h1>
+        <div className="logo">
+            <Link to="/">
+                <h1>Logo</h1>
+            </Link>
         </div>
     );
 };
-
-export default Logo;

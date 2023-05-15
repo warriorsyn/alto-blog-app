@@ -1,6 +1,6 @@
 import React from "react";
 import {PostList} from "../organisms/PostList/PostList";
-import {Post} from "../types";
+import {Post} from "../services/types";
 
 type Props = {
     posts: Post[];
