@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Container from "@mui/material/Container/Container";
+
 import { Post } from "./types";
 import { Home } from "./pages/Home";
 import { Blog } from "./pages/Blog";
 import { NewPost } from "./pages/NewPost";
 import { MainMenu } from "./molecules/MainMenu/MainMenu";
-import "./App.css";
+
 import { Contact } from "./pages/Contact";
 import { SinglePost } from "./pages/SinglePost";
+
+import { UpdatePost } from "./pages/UpdatePost";
+import { About } from "./pages/About";
+import { Option } from "./atoms/Autocomplete/Autocomplete";
+
 import {
   getPostsFromLocalStorage,
   savePostsToLocalStorage,
 } from "./services/api";
-import { UpdatePost } from "./pages/UpdatePost";
-import { About } from "./pages/About";
-import { Option } from "./atoms/Autocomplete/Autocomplete";
+
 import "./styles/global.scss";
-import Container from "@mui/material/Container/Container";
+import "./App.css";
 
 const App: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -35,6 +40,9 @@ const App: React.FC = () => {
   useEffect(() => {
     if (posts.length) {
       savePostsToLocalStorage(posts);
+      const autocompleteOptions = convertPostsToAutocompleteOptions(posts);
+
+      setAutocompleteOptions(autocompleteOptions);
     }
   }, [posts]);
 
@@ -51,6 +59,7 @@ const App: React.FC = () => {
       cdn,
       created: new Date().toLocaleDateString(),
     };
+
     setPosts([...posts, newPost]);
 
     callbackFn && callbackFn();

@@ -1,7 +1,7 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import PostForm from './PostForm';
+import {PostForm} from './PostForm';
 
 describe('PostForm', () => {
     test('renders form inputs and button', () => {

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import PostForm from "../organisms/PostForm";
+import {PostForm} from "../organisms/PostForm/PostForm";
 import {Post} from "../types";
 import {useParams} from "react-router-dom";
 import {getPostByIdFromLocalStorage} from "../services/api";
@@ -15,7 +15,7 @@ export const UpdatePost: React.FC<Props> = ({updatePost}) => {
     useEffect(() => {
         const post = getPostByIdFromLocalStorage(Number(id));
         post && setSinglePost(post);
-    }, [])
+    }, [id])
 
     return (
       <>

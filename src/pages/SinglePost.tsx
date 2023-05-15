@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import PostView from "../organisms/PostView";
+import {PostView} from "../organisms/PostView/PostView";
 import {getPostByIdFromLocalStorage} from "../services/api";
 import {Post} from "../types";
 

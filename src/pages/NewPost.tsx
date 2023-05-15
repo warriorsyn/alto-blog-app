@@ -1,5 +1,5 @@
 import React from "react";
-import PostForm from "../organisms/PostForm";
+import {PostForm} from "../organisms/PostForm/PostForm";
 
 type Props = {
     createPost?: (title: string, content: string, cdn: string, callbackFn?: Function) => void;

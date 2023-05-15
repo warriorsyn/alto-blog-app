@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Post } from "../types";
+import {useNavigate} from "react-router-dom";
+
+import {Button} from "../../atoms/Button/Button";
+import { Post } from "../../types";
+
 
 import './postform.scss'
-import {Button} from "../atoms/Button/Button";
-import {useNavigate} from "react-router-dom";
 
 type PostFormProps = {
     createPost?: (title: string, content: string, cdn: string, callbackFn?: Function) => void;
@@ -11,7 +13,7 @@ type PostFormProps = {
     post?: Post | null;
 };
 
-function PostForm({ createPost, updatePost, post }: PostFormProps) {
+export function PostForm({ createPost, updatePost, post }: PostFormProps) {
     const [title, setTitle] = useState(post ? post.title : "");
     const [content, setContent] = useState(post ? post.content : "");
     const [cdn, setCdn] = useState(post?.cdn ?? "");
@@ -47,18 +49,12 @@ function PostForm({ createPost, updatePost, post }: PostFormProps) {
                     placeholder="SinglePost Title"
                     onChange={(event) => setTitle(event.target.value)}
                 />
-
-
-
-
                 <input
                     placeholder="CDN Image"
                     type="text"
                     value={cdn}
                     onChange={(event) => setCdn(event.target.value)}
                 />
-
-
 
                 <textarea
                     placeholder="Write the post content"
@@ -70,5 +66,3 @@ function PostForm({ createPost, updatePost, post }: PostFormProps) {
         </form>
     );
 }
-
-export default PostForm

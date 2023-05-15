@@ -1,6 +1,7 @@
-import { Post } from "../types";
-import HeroImage from "../atoms/HeroImage";
 import {Link} from "react-router-dom";
+
+import { Post } from "../../types";
+import HeroImage from "../../atoms/HeroImage";
 
 import './postview.scss';
 
@@ -8,7 +9,7 @@ type PostViewProps = {
     post: Post;
 };
 
-function PostView({ post }: PostViewProps) {
+export function PostView({ post }: PostViewProps) {
     return (
         <section className="postview">
             <div>
@@ -31,4 +32,3 @@ function PostView({ post }: PostViewProps) {
     );
 }
 
-export default PostView;

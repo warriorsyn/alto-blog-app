@@ -1,8 +1,8 @@
-import HeroImage from "../../atoms/HeroImage";
 import React from "react";
+
 import { Post } from "../../types";
+
 import "./Card.scss";
-import { Grid } from "@mui/material";
 
 type Props = {
   gridSize: number;
@@ -48,7 +48,7 @@ export const Card: React.FC<Props> = ({ card, gridSize }) => {
         limit = 15;
         break;
     }
-    if (title.length > limit && gridSize != 12) {
+    if (title.length > limit && gridSize !== 12) {
       return title.substring(0, limit) + "...";
     } else {
       return title;

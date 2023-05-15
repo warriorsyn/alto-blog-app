@@ -18,7 +18,7 @@ export const CardGrid: React.FC<Props> = ({ cards, gridSize }) => {
       <Grid container spacing={gridSize > 4 ? gridSize/2 : 2}>
         {cards.map((card) => (
 
-              <Grid mb={4} item md={gridSize}>
+              <Grid mb={4} item md={gridSize} data-testid="card" key={card.id}>
                   <Link to={`/posts/${card.id}`}>
                   <Card gridSize={gridSize} card={card}/>
                   </Link>
