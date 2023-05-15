@@ -1,0 +1,25 @@
+.postlist {
+  > div {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      margin-right: 0.5rem ;
+    }
+  }
+
+
+  &__cards {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+  }
+}

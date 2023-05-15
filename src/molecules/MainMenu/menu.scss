@@ -1,0 +1,26 @@
+.main-menu {
+  display: flex;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+
+  &__nav-items {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    li {
+      a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+
+        &:hover {
+          color: var(--primary-color);
+          padding-bottom: 10px;
+          border-bottom: 3px solid var(--primary-color);
+        }
+      }
+    }
+  }
+}
