@@ -4,12 +4,13 @@ import {Post} from "../services/types";
 
 type Props = {
     posts: Post[];
-    filteredPosts: Post[];
-    setFilteredPosts?: React.Dispatch<React.SetStateAction<Post[]>>;
 };
 
-export const Blog: React.FC<Props> = ({posts, filteredPosts}: Props) => {
+export const Blog: React.FC<Props> = ({posts}: Props) => {
     return (
-        <PostList posts={posts} />
+        <>
+            <PostList posts={posts} />
+            {!posts.length && (<p>There is no post created yet!</p>)}
+        </>
     )
 }

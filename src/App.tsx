@@ -25,7 +25,6 @@ import "./App.css";
 
 const App: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [autocompleteOptions, setAutocompleteOptions] = useState<Option[]>([]);
 
   useEffect(() => {
@@ -111,15 +110,13 @@ const App: React.FC = () => {
               path="/posts/:id/edit"
               element={<UpdatePost updatePost={updatePost} />}
             />
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home posts={posts}/>} />
             <Route path="/contact" element={<Contact />} />
 
             <Route
               path="/blog"
               element={
                 <Blog
-                  setFilteredPosts={setFilteredPosts}
-                  filteredPosts={filteredPosts}
                   posts={posts}
                 />
               }

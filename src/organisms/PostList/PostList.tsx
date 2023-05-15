@@ -17,8 +17,8 @@ export const PostList: React.FC<Props> = ({ posts }) => {
                 <h2>All Posts</h2>
                  <Link to="/posts/new">Add post</Link>
             </div>
-              <div className="postlist__cards" >
-              <CardGrid gridSize={3} cards={posts} />
+              <div className="postlist__cards">
+                <CardGrid gridSize={3} cards={posts} />
               </div>
         </div>
     );
